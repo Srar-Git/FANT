@@ -1,7 +1,7 @@
 # the Flexible Active in-band Network Telemetry
 ## Introduction
 
-To solve the above problems, we propose a flexible active
+We propose a flexible active
 INT (FANT) method, which decouples the solution into a
 mechanism and a strategy. The workflow of daily network
 troubleshooting is to check the general measurement results,
