@@ -54,3 +54,11 @@ a not-bad performance on network overhead reduction.
 - Greedy
 - Dynamic Cover
 - Optimal Static
+
+## Topology
+- FatTree
+- SpineLeaf
+- BackBone
+
+## Algorithm Structure
+The structure include `UploadChanges`, `ExecutionTime`
