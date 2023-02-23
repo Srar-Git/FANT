@@ -49,3 +49,8 @@ update the switch instruction policy to a dynamic version.
 The dynamic version optimizes the calculation speed at high
 sensitivity and reduces the risk of over-control while keeping
 a not-bad performance on network overhead reduction.
+
+## Algorithms
+- Greedy
+- Dynamic Cover
+- Optimal Static
