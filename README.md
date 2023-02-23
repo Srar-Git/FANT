@@ -11,10 +11,10 @@ that work in controller-driven, per-device polling way. So it
 cannot reach the ideal accuracy, coverage, and timeliness for
 high-density data center network operations and maintenance
 at this stage. INT allows packets to collect fine-grained measurements of the flow and the internal state of the device along
-its forwarding path [9], which is valuable for troubleshooting
-[6], traffic engineering [7], and congestion control. Nowadays,
+its forwarding path, which is valuable for troubleshooting
+[6], traffic engineering, and congestion control. Nowadays,
 INT is considered an indispensable feature and is implemented
-in silicon and devices from multiple vendors [16-18]. The main
+in silicon and devices from multiple vendors. The main
 principle of traditional INT is that the source node inserts an
 INT header as a tag into the user flow. When a datagram
 with the tag passes through an INT-enabled switch, the switch
