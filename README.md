@@ -4,7 +4,13 @@
 Network management applications require more
 comprehensive measurement results to support new features.
 Catering to the trend, various switch vendors are constantly
-adding network measurement indicators to the telemetry supporting list
+adding network measurement indicators to the telemetry supporting list. The
+increase of upload measurement items enables the networkwide telemetry framework to offer multi-directional network
+visibility for network managers to locate network anomalies.
+But at the same time, it also brings about the processing burden
+on the INT controller and larger overhead of the network,
+which will impede the network telemetry framework to be
+widely deployed.
 
 To solve the above problems, we propose a flexible active
 INT (FANT) method, which decouples the solution into a
