@@ -1,7 +1,12 @@
 # the Flexible Active in-band Network Telemetry
 ## Introduction
 
-We propose a flexible active
+Network management applications require more
+comprehensive measurement results to support new features.
+Catering to the trend, various switch vendors are constantly
+adding network measurement indicators to the telemetry supporting list
+
+To solve the above problems, we propose a flexible active
 INT (FANT) method, which decouples the solution into a
 mechanism and a strategy. The workflow of daily network
 troubleshooting is to check the general measurement results,
