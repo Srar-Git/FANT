@@ -1,6 +1,40 @@
 # the Flexible Active in-band Network Telemetry
 ## Introduction
 
-The data center network of cloud service providers or Internet companies carries a large amount of dynamic traffic, so it is challenging to handle network problems such as silent failure and load imbalance. Fine-grained network visibility helps network administrators promptly locate and solve the above issues, which is very important for maintaining modern large networks. Traditional network management protocols such as SNMP, designed primarily for lower bandwidth networks, employ inefficient polling measurement mechanisms that work in controller-driven, per-device polling way. So it cannot reach the ideal accuracy, coverage, and timeliness for high-density data center network operations and maintenance at this stage. INT allows packets to collect fine-grained measurements of the flow and the internal state of the device along its forwarding path, which is valuable for troubleshooting [6], traffic engineering, and congestion control. Nowadays, INT is considered an indispensable feature and is implemented in silicon and devices from multiple vendors. The main principle of traditional INT is that the source node inserts an INT header as a tag into the user flow. When a datagram with the tag passes through an INT-enabled switch, the switch will embed its internal-device network state such as port traffic statistics, queue length, timestamp, etc., into the packet. At the destination of the INT measurement path, there will be INT sink nodes to extract the measurement results and remove extra fields added by INT architecture. When the packet carrying the INT header is not a tagged service packet but a custom packet injected by the server, the draft defined this as active INT (ANT). We refer to the dedicated custom packet as a probe packet and the server as an INT transceiver. The probe packets will be queued and processed together with the user traffic so that they can provide accurate measurements. 
-
-These two INT techniques provide the ability to be visible to the network status in different ways. Passive INT has finer granularity and greater overhead. Active INT has large-scale coverage and lower overhead.No matter what kind of INT system, each INT instance can only obtain real-time traffic status of the chain of devices along the packet’s trace. So the network-wide telemetry coverage for the network dashboard requires a high-level orchestration to provision multiple INT paths that traverse the entire network. Many researchers have proposed the combination of SDN and ANT to achieve network-wide measurements. Their solutions exploit SDN ’s visibility of the full network topology to guide the ANT in constructing multiple appropriate probe traces. These approaches are lightweight and easy to deploy and are a hot research topic in network telemetry.
+To solve the above problems, we propose a flexible active
+INT (FANT) method, which decouples the solution into a
+mechanism and a strategy. The workflow of daily network
+troubleshooting is to check the general measurement results,
+such as bandwidth and latency from the data center network
+of the cloud service provider, to determine whether there is
+a problem with the network at first and then analyze other
+items such as queue buffers to indicate the specific problems.
+Inspired by this troubleshooting process, we divide the entire
+measurement sets into two parts: basic measurement and
+detailed measurement, according to the relationship between
+them. FANT uses ANT architecture to inject many dedicated
+packets routed by source routing technology (which we call
+the INT probe as follows) to retrieve the basic network
+status information from the whole network. Next, the INT
+controller classifies the basic network status information and
+identifies the abnormal parts. Then based on the abnormal
+parts, FANT switches some of the original INT probes to the
+probes with special marks in the next measurement cycle for
+fetching detailed measurements from the device. Deploying
+probe traces for detailed measurements will collect more
+specific and comprehensive network status, thereby providing
+more excellent assistance for network monitoring and maintenance.
+However, detailed measurements will also lead to
+network overhead and an increasing load on the INT controller.
+Therefore, selecting which INT probes should be switched to
+perform detailed measurements is necessary. We propose a
+switch instruction policy based on IDA* algorithm to achieve
+a solution close to the theoretical optimal value, which can
+significantly reduce the network overhead and INT controller’s
+load. In addition, under the trend of monitoring and operating
+the network more accurately, To make the policy available
+when the measurement cycle is further reduced, we also
+update the switch instruction policy to a dynamic version.
+The dynamic version optimizes the calculation speed at high
+sensitivity and reduces the risk of over-control while keeping
+a not-bad performance on network overhead reduction.
