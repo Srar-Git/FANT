@@ -60,5 +60,9 @@ a not-bad performance on network overhead reduction.
 - SpineLeaf
 - BackBone
 
+> the files in `Topology`
+> - roads.txt: the probe roads of the topo
+> - pathNums.txt: the number of roads of the topo
+
 ## Algorithm Structure
-The structure include `UploadChanges`, `ExecutionTime`
+The structure include `UploadChanges`, `ExecutionTime`, `HighFrequencyUploadChanges`, `OptimizeDLX` and `Optimize_Dynamic`
