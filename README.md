@@ -78,14 +78,14 @@ the greedy set cover file.
 the optimal static set cover file, uses IDA* and dancing link to cover sets.
 
 ### Dynamic
-**run**
+**run.py**
 
 the main function of the dynamic random cover.
 
-**dynamic_update**
+**dynamic_update.py**
 
 functions of `insert`, `remove` elements and `updating`.
 
-**random_cover**
+**random_cover.py**
 
 the random cover function, will be called at two above stages.
