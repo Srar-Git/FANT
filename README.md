@@ -54,6 +54,7 @@ a not-bad performance on network overhead reduction.
 - Greedy
 - Dynamic Cover
 - Optimal Static
+all code deveoped by ***Python3.9***
 
 ## Topology
 - FatTree
@@ -65,4 +66,7 @@ a not-bad performance on network overhead reduction.
 > - pathNums.txt: the number of roads of the topo
 
 ## Algorithm Structure
-The structure include `UploadChanges`, `ExecutionTime`, `HighFrequencyUploadChanges`, `OptimizeDLX` and `Optimize_Dynamic`
+The structure include `UploadChanges`, `ExecutionTime`, `HighFrequencyUploadChanges`, `OptimizeDLX` and `OptimizeDynamic`. Everyone of them use `Greedy`, `Dynamic Cover` and `Optimal Static` to compare with.
+### Greedy
+***greedy.py***
+the greedy set cover file
