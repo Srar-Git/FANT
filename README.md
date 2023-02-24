@@ -54,7 +54,6 @@ a not-bad performance on network overhead reduction.
 - Greedy
 - Dynamic Cover
 - Optimal Static
-all code deveoped by ***Python3.9***
 
 ## Topology
 - FatTree
@@ -89,3 +88,7 @@ functions of `insert`, `remove` elements and `updating`.
 **random_cover.py**
 
 the random cover function, will be called at two above stages.
+
+## Dependency
+
+All code deveoped and should run with `Python3.9`
