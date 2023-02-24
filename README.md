@@ -68,5 +68,5 @@ all code deveoped by ***Python3.9***
 ## Algorithm Structure
 The structure include `UploadChanges`, `ExecutionTime`, `HighFrequencyUploadChanges`, `OptimizeDLX` and `OptimizeDynamic`. Everyone of them use `Greedy`, `Dynamic Cover` and `Optimal Static` to compare with.
 ### Greedy
-***greedy.py***
+**greedy.py**
 the greedy set cover file
