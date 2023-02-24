@@ -69,4 +69,23 @@ all code deveoped by ***Python3.9***
 The structure include `UploadChanges`, `ExecutionTime`, `HighFrequencyUploadChanges`, `OptimizeDLX` and `OptimizeDynamic`. Everyone of them use `Greedy`, `Dynamic Cover` and `Optimal Static` to compare with.
 ### Greedy
 **greedy.py**
-the greedy set cover file
+
+the greedy set cover file.
+
+### Optimial Static
+**dancingLink.py**
+
+the optimal static set cover file, uses IDA* and dancing link to cover sets.
+
+### Dynamic
+**run**
+
+the main function of the dynamic random cover.
+
+**dynamic_update**
+
+functions of `insert`, `remove` elements and `updating`.
+
+**random_cover**
+
+the random cover function, will be called at two above stages.
