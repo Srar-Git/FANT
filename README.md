@@ -91,4 +91,4 @@ the random cover function, will be called at two above stages.
 
 ## Dependency
 
-All code deveoped and should run with `Python3.9`
+All code developed and should run with `Python3.9`
